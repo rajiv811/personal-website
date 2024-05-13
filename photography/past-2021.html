@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">
+        <a href="/">Rajiv Singireddy</a>
+      </div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="/#about">About</a></li>
+          <li><a href="/#experience">Experience</a></li>
+          <li><a href="/#projects">Projects</a></li>
+          <li><a href="/photography">Photography</a></li>
+          <li><a href="/super8">Super8</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo"><a href="/">Rajiv Singireddy</a></div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onClick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="/#about" onClick="toggleMenu()">About</a></li>
+          <li><a href="/#experience" onClick="toggleMenu()">Experience</a></li>
+          <li><a href="/#projects" onClick="toggleMenu()">Projects</a></li>
+          <li><a href="/photography" onClick="toggleMenu()">Photography</a></li>
+          <li><a href="/super8" onClick="toggleMenu()">Super8</a></li>
+          <li><a href="/#contact" onClick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <h1 class="title">2021</h1>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img
+          src="/assets/images/film-photos/2021-and-past/2021-1.jpg"
+          alt="Image 1"
+          onclick="openModal('/assets/images/film-photos/2021-and-past/2021-1.jpg','Text for Image 1')"
+        />
+      </div>
+      <div class="gallery-item">
+        <img
+          src="/assets/images/film-photos/2021-and-past/2021-2.jpg"
+          alt="Image 1"
+          onclick="openModal('/assets/images/film-photos/2021-and-past/2021-2.jpg','Text for Image 1')"
+        />
+      </div>
+      <div class="gallery-item">
+        <img
+          src="/assets/images/film-photos/2021-and-past/2021-3.jpg"
+          alt="Image 1"
+          onclick="openModal('/assets/images/film-photos/2021-and-past/2021-3.jpg','Text for Image 1')"
+        />
+      </div>
+      <div class="gallery-item">
+        <img
+          src="/assets/images/film-photos/2021-and-past/2021-4.jpg"
+          alt="Image 1"
+          onclick="openModal('/assets/images/film-photos/2021-and-past/2021-4.jpg','Text for Image 1')"
+        />
+      </div>
+      <div class="gallery-item">
+        <img
+          src="/assets/images/film-photos/2021-and-past/2021-5.jpg"
+          alt="Image 1"
+          onclick="openModal('/assets/images/film-photos/2021-and-past/2021-5.jpg','Text for Image 1')"
+        />
+      </div>
+      <div class="gallery-item">
+        <img
+          src="/assets/images/film-photos/2021-and-past/2021-6.jpg"
+          alt="Image 1"
+          onclick="openModal('/assets/images/film-photos/2021-and-past/2021-6.jpg','Text for Image 1')"
+        />
+      </div>
+      <div class="gallery-item">
+        <img
+          src="/assets/images/film-photos/2021-and-past/2021-7.jpg"
+          alt="Image 1"
+          onclick="openModal('/assets/images/film-photos/2021-and-past/2021-7.jpg','Text for Image 1')"
+        />
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-item">
+          <img
+            src="/assets/images/film-photos/2021-and-past/2021-8.jpg"
+            alt="Image 1"
+            onclick="openModal('/assets/images/film-photos/2021-and-past/2021-8.jpg','Text for Image 1')"
+          />
+        </div>
+      </div>
+    </div>
+    <div id="myModal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="modalImg" />
+      <div id="modalText" class="modal-text"></div>
+    </div>
+    <!-- Add more gallery items as needed -->
+    <footer>
+      <p>Copyright &#169; 2021 Rajiv Singireddy. All Rights Reserved.</p>
+    </footer>
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>

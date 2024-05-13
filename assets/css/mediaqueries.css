@@ -1,0 +1,217 @@
+@media screen and (max-width: 1400px) {
+    #profile {
+      height: 83vh;
+      margin-bottom: 6rem;
+    }
+    .about-containers {
+      flex-wrap: wrap;
+    }
+    #contact,
+    #projects {
+      height: fit-content;
+    }
+  }
+  
+  @media screen and (max-width: 1200px) {
+    #desktop-nav {
+      display: none;
+    }
+    #hamburger-nav {
+      display: flex;
+    }
+    #experience,
+    .experience-details-container {
+      margin-top: 2rem;
+    }
+    #profile,
+    .section-container {
+      display: block;
+    }
+    .arrow {
+      display: none;
+    }
+    section,
+    .section-container {
+      height: fit-content;
+    }
+    section {
+      margin: 0 5%;
+    }
+    .section__pic-container {
+      width: 275px;
+      height: 275px;
+      margin: 0 auto 2rem;
+    }
+    .about-containers {
+      margin-top: 0;
+    }
+    .modal-text {
+      bottom: 20%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    #contact,
+    footer {
+      height: 40vh;
+    }
+    #profile {
+      height: 83vh;
+      margin-bottom: 0;
+    }
+    article {
+      font-size: 1rem;
+    }
+    footer nav {
+      height: fit-content;
+      margin-bottom: 2rem;
+    }
+    .about-containers,
+    .contact-info-upper-container,
+    .btn-container {
+      flex-wrap: wrap;
+    }
+    .contact-info-container {
+      margin: 0;
+    }
+    .contact-info-container p,
+    .nav-links li a {
+      font-size: 1rem;
+    }
+    .experience-sub-title {
+      font-size: 1.25rem;
+    }
+    .logo {
+      font-size: 1rem;
+    }
+    .nav-links {
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+    }
+    .section__pic-container {
+      width: auto;
+      height: 46vw;
+      justify-content: center;
+    }
+    .section__text__p2 {
+      font-size: 1.25rem;
+    }
+    .title {
+      font-size: 2rem;
+    }
+    .text-container {
+      text-align: justify;
+    }
+
+    /* Hamburger Menu CSS */
+    .hamburger-menu {
+      padding: 20px;
+    }
+  
+    .menu-links {
+      list-style: none;
+      padding: 0;
+    }
+  
+    .menu-links li {
+      margin-bottom: 20px;
+    }
+  
+    .menu-links li a {
+      color: #000000;
+      text-decoration: none;
+      font-size: 18px;
+    }
+  
+    .menu-links li a:hover {
+      color: #555555;
+    }
+    
+    /* Gallary CSS */
+    .gallery-card {
+      width: 80%; /* Adjust width for smaller screens */
+    }
+    
+    .centered {
+      top: 50%; /* Adjust top position for smaller screens */
+      left: 50%; /* Keep the horizontal centering */
+      transform: translateX(-50%,-50%); /* Only center horizontally */
+      font-size: 14px; /* Adjust font size for smaller screens */
+      padding: 8px; /* Adjust padding for smaller screens */
+    }
+
+    .gallery {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust column width for smaller screens */
+      gap: 5px; /* Reduce gap between gallery items for smaller screens */
+      padding: 5px; /* Reduce padding for smaller screens */
+    }
+    /* Modal CSS */
+    .modal-content {
+      max-width: 95%; /* Adjust maximum width for smaller screens */
+      max-height: 95%; /* Adjust maximum height for smaller screens */
+    }
+    .modal-text {
+      bottom: 30%;
+    }
+    .close {
+      top: 5px; /* Adjust top position for smaller screens */
+      right: 5px; /* Adjust right position for smaller screens */
+    }
+  }
+
+
+/* @media screen and (max-width: 600px) {
+    #contact,
+    footer {
+      height: 40vh;
+    }
+    #profile {
+      height: 83vh;
+      margin-bottom: 0;
+    }
+    article {
+      font-size: 1rem;
+    }
+    footer nav {
+      height: fit-content;
+      margin-bottom: 2rem;
+    }
+    .about-containers,
+    .contact-info-upper-container,
+    .btn-container {
+      flex-wrap: wrap;
+    }
+    .contact-info-container {
+      margin: 0;
+    }
+    .contact-info-container p,
+    .nav-links li a {
+      font-size: 1rem;
+    }
+    .experience-sub-title {
+      font-size: 1.25rem;
+    }
+    .logo {
+      font-size: 1.5rem;
+    }
+    .nav-links {
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+    }
+    .section__pic-container {
+      width: auto;
+      height: 46vw;
+      justify-content: center;
+    }
+    .section__text__p2 {
+      font-size: 1.25rem;
+    }
+    .title {
+      font-size: 2rem;
+    }
+    .text-container {
+      text-align: justify;
+    }
+  } */

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">
+        <a href="/">Rajiv Singireddy</a>
+      </div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="/photography">Photography</a></li>
+          <li><a href="/super8">Super8</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo"><a href="/">Rajiv Singireddy</a></div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onClick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onClick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onClick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onClick="toggleMenu()">Projects</a></li>
+          <li>
+            <a href="/photography" onClick="toggleMenu()">Photography</a>
+          </li>
+          <li><a href="/super8" onClick="toggleMenu()">Super8</a></li>
+          <li><a href="#contact" onClick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img
+          src="/assets/images/pfp/main-pic.jpg"
+          alt="Rajiv Singireddy profile picture"
+        />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1>Rajiv Singireddy</h1>
+        <p class="section__text__p2">Systems Engineer & Film Photographer</p>
+        <div class="btn-container">
+          <button class="btn btn-color-1" onclick="location.href='/#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="social-container">
+          <img
+            src="/assets/images/icons/linkedin.png"
+            alt="My LinkedIn Profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/rajiv-singireddy/'"
+          />
+          <img
+            src="/assets/images/icons/github.png"
+            alt="My Github Profile"
+            class="icon"
+            onclick="location.href='https://github.com/rajiv811'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="/assets/images/pfp/profile-pic.jpg"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="/assets/images/icons/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>2+ years <br />Systems Engineering</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="/assets/images/icons/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>B.Sc. Bachelors Degree<br />Seattle University</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Hi! My name is Rajiv Singireddy and I am a Systems Engineer for
+              HPE. Some of my hobbies include film photography, super8
+              videography and pickup basketball.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="/assets/images/icons/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='/#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Systems Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="/assets/images/icons/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Docker & Podman</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="/assets/images/icons/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Ansible</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="/assets/images/icons/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Linux</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="/assets/images/icons/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Bash & Shell</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="/assets/images/icons/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>ELK Stack</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="/assets/images/icons/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Prometheus</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Development Languages</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="/assets/images/icons/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="/assets/images/icons/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML/CSS</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="/assets/images/icons/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Node JS</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="/assets/images/icons/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="/assets/images/icons/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SQL</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="/assets/images/icons/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>C++</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="/assets/images/icons/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='/#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="/assets/images/project-pics/projects-bball.jpg"
+                alt="Machine Learning Project"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">
+              ML NBA Hall of Fame Classifier
+            </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/rajiv811/Machine-Learning-Spring-2020'"
+              >
+                Github
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="/assets/images/project-pics/projects-weather.jpg"
+                alt="Activity Weather App Project"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">
+              Activity Weather Application (Seattle University Hackathon)
+            </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/rajiv811/WeatherApp'"
+              >
+                Github
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="/assets/images/icons/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='/#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="/assets/images/icons/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:rajivsingireddy811@gmail.com">rajivsingireddy811@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="/assets/images/icons/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/rajiv-singireddy/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="/photography">Photography</a></li>
+            <li><a href="/super8">Super8</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 Rajiv Singireddy. All Rights Reserved.</p>
+    </footer>
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>
