@@ -1274,12 +1274,29 @@ h3 {
 }
 
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
+  column-count: 2;
+  column-gap: 0.6rem;
   margin-top: 1rem;
+}
+
+@media (min-width: 640px) {
+  .gallery-grid {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery-grid {
+    column-count: 4;
+  }
 }
 
 .gallery-grid .gallery-img {
   cursor: pointer;
+  width: 100%;
+  height: auto;
+  margin: 0 0 0.6rem;
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  border-radius: 2px;
 }
