@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiet Light — Photography & Videography</title>
+    <meta
+      name="description"
+      content="An art-directed photo and film portfolio with immersive sections for equipment, photography collections, and videography."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="loading-screen" id="loadingScreen">
+      <div class="loading-logo">
+        <img src="assets/logo/logo.png" alt="Loading" />
+      </div>
+    </div>
+
+    <div class="page-aura" aria-hidden="true"></div>
+    <div class="cursor-orb" aria-hidden="true"></div>
+
+    <header class="site-header shell">
+      <a href="#top" class="brand" aria-label="RS portfolio home">
+        <span class="brand-seal brand-monogram">
+          <img src="assets/logo/logo.png" alt="RS logo" style="width:100%;height:100%;object-fit:contain;display:block;" />
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#photography">Photography</a>
+        <a href="#videography">Videography</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero shell-wide">
+        <div class="about-me" style="display:flex;gap:2rem;align-items:center;flex-wrap:wrap;padding:2.5rem 0;justify-content:center;">
+
+          <div style="flex:1;min-width:240px;max-width:600px;text-align:center;">
+            <h1 style="display:flex;justify-content:center;align-items:baseline;gap:0.9rem;flex-wrap:wrap;">
+              <span>Rajiv</span>
+              <span style="font-size:0.35em;color:var(--muted);letter-spacing:0;">(ruh-JEEV)</span>
+              <span style="font-size:0.55em;color:var(--muted);letter-spacing:0;">राजीव</span>
+            </h1>
+            <p class="hero-text" style="max-width:46rem;margin:0.8rem auto 0;color:var(--muted);">
+              I make photos and films focused on atmosphere, storytelling, and quiet moments. Available for portraits, travel, weddings, and creative collaborations.
+            </p>
+
+            <div class="hero-actions" style="margin-top:1.5rem;">
+              <a class="button button-solid" href="#photography">View photography</a>
+              <a class="button button-outline" href="#contact">Get in touch</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="photography" class="section shell immersive-section photography-section">
+        <p class="kicker">Photography</p>
+
+        <div id="card-highlights" class="story-strip story-simple" style="--story-bg: url('assets/photos/best_photos/000018090001.jpg');">
+          <div class="story-head">
+            <span class="card-no">01</span>
+            <p class="story-kind">Best of collection</p>
+            <h3>Highlights</h3>
+          </div>
+          <div class="story-layout" aria-hidden="true"></div>
+          <a class="section-link" href="highlights.html" aria-label="Open Highlights gallery"></a>
+        </div>
+
+        <div id="card-thailand" class="story-strip story-simple" style="--story-bg: url('assets/photos/thailand/000018090021.jpg'); background-position: center 0%;">
+          <div class="story-head">
+            <span class="card-no">02</span>
+            <p class="story-kind">Travel collection</p>
+            <h3>Thailand</h3>
+          </div>
+          <div class="story-layout" aria-hidden="true"></div>
+          <a class="section-link" href="thailand.html" aria-label="Open Thailand gallery"></a>
+        </div>
+
+        <div id="card-peru" class="story-strip story-simple" style="--story-bg: url('assets/photos/peru/000091020026.jpg');">
+          <div class="story-head right-copy">
+            <span class="card-no">03</span>
+            <p class="story-kind">Travel collection</p>
+            <h3>Peru</h3>
+          </div>
+          <div class="story-layout" aria-hidden="true"></div>
+          <a class="section-link" href="peru.html" aria-label="Open Peru gallery"></a>
+        </div>
+
+        <div id="card-san-francisco" class="story-strip story-simple" style="--story-bg: url('assets/photos/san_francisco/000000550030.jpg');">
+          <div class="story-head">
+            <span class="card-no">04</span>
+            <p class="story-kind">Travel collection</p>
+            <h3>San Francisco</h3>
+          </div>
+          <div class="story-layout" aria-hidden="true"></div>
+          <a class="section-link" href="san_francisco.html" aria-label="Open San Francisco gallery"></a>
+        </div>
+
+        <div id="card-new-york" class="story-strip story-simple" style="--story-bg: url('assets/photos/new_york/000082610029.jpg');">
+          <div class="story-head">
+            <span class="card-no">05</span>
+            <p class="story-kind">Travel collection</p>
+            <h3>New York</h3>
+          </div>
+          <div class="story-layout" aria-hidden="true"></div>
+          <a class="section-link" href="new_york.html" aria-label="Open New York gallery"></a>
+        </div>
+
+        <div id="card-engagement" class="story-strip story-simple" style="--story-bg: url('assets/photos/michael_proposal/IMG_6483.JPG');">
+          <div class="story-head narrow-copy">
+            <span class="card-no">06</span>
+            <p class="story-kind">Engagement collection</p>
+            <h3>Michael & Olivia's engagement</h3>
+          </div>
+          <div class="story-layout" aria-hidden="true"></div>
+          <a class="section-link" href="wedding.html" aria-label="Open engagement gallery"></a>
+        </div>
+        </div>
+      </section>
+
+      <section id="videography" class="section shell section-split films-section immersive-section videography-section">
+        <div class="section-title sticky-title">
+          <p class="kicker">Videography</p>
+          <h2>A Super 8 journey through Europe.</h2>
+          <p>
+            Analog grain, natural light, and unfiltered moments captured on film throughout my travels across Europe.
+          </p>
+        </div>
+
+        <a class="section-link" href="videography.html" aria-label="Open Videography"></a>
+      </section>
+
+    </main>
+
+    <footer id="contact" class="site-footer shell">
+      <div style="text-align:center;padding:4rem 0;max-width:600px;margin:0 auto;">
+        <h2>Let's work together.</h2>
+        <p style="color:var(--muted);margin:1rem 0 2rem;">
+          <a href="mailto:rajivsingireddy811@gmail.com" style="color:var(--ink);text-decoration:none;">rajivsingireddy811@gmail.com</a>
+        </p>
+        <div style="display:flex;gap:2rem;justify-content:center;font-size:0.9rem;">
+          <a href="https://www.instagram.com/rajiv811" target="_blank" rel="noreferrer" style="color:var(--muted);text-decoration:none;">Instagram</a>
+          <a href="https://www.youtube.com/watch?v=btVn16MfnGQ" target="_blank" rel="noreferrer" style="color:var(--muted);text-decoration:none;">YouTube</a>
+        </div>
+      </div>
+      <p class="footer-small" style="text-align:center;margin-top:2rem;">© <span id="year"></span> Quiet Light</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
