@@ -347,6 +347,10 @@ h3 {
   background: rgba(255, 255, 255, 0.03);
 }
 
+.contact-block {
+  padding: 4rem 0;
+}
+
 .contact-form {
   text-align: left;
   display: flex;
@@ -427,12 +431,60 @@ h3 {
 }
 
 @media (max-width: 560px) {
+  .site-footer {
+    min-height: auto;
+    padding: 2rem 0 2rem;
+  }
+
+  .contact-block {
+    padding: 0.5rem 0;
+  }
+
+  .contact-block h2 {
+    font-size: 2.1rem;
+  }
+
+  .contact-intro {
+    font-size: 0.9rem;
+    margin: 0.6rem 0 1.4rem !important;
+  }
+
+  .contact-socials {
+    margin-top: 1.6rem !important;
+  }
+
   .form-row {
     flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .contact-form {
+    gap: 0.8rem;
+  }
+
+  .form-field {
+    gap: 0.3rem;
+  }
+
+  .form-field label {
+    font-size: 0.8rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.65rem 0.85rem;
+    font-size: 0.9rem;
+    border-radius: 12px;
+  }
+
+  .contact-form textarea {
+    min-height: 4rem;
   }
 
   .contact-submit {
     align-self: stretch;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
   }
 }
 
