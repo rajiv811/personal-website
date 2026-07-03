@@ -118,6 +118,21 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// On mobile, clicking the logo should always land at the very top of the
+// page. The sticky header sits in normal document flow above #top, so the
+// browser's native anchor jump only scrolls as far as the header's height
+// instead of all the way to y=0. Force a full scroll-to-top on small screens.
+const brandHomeLinks = document.querySelectorAll('a.brand[href="#top"]');
+brandHomeLinks.forEach((link) => {
+  link.addEventListener('click', (event) => {
+    if (window.matchMedia('(max-width: 820px)').matches) {
+      event.preventDefault();
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+      history.replaceState(null, '', '#top');
+    }
+  });
+});
+
 const navLinks = document.querySelectorAll('.site-nav a');
 navLinks.forEach((link) => {
   link.addEventListener('click', () => {
