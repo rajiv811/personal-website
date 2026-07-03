@@ -153,26 +153,13 @@ navLinks.forEach((link) => {
     const headerOffset = header ? header.offsetHeight + 24 : 24;
     const markerY = window.scrollY + headerOffset;
     const atPageBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
-    const contactEl = document.getElementById('contact');
     let currentId = null;
 
-    if (contactEl) {
-      const contactRect = contactEl.getBoundingClientRect();
-      const footerVisible = contactRect.top < window.innerHeight && contactRect.bottom > 0;
-      const nearContact = window.scrollY + window.innerHeight >= contactEl.offsetTop + 40;
-      const hashIsContact = window.location.hash === '#contact';
-      if (footerVisible || nearContact || (hashIsContact && atPageBottom)) {
-        currentId = 'contact';
-      }
-    }
-
-    if (!currentId) {
-      for (const sec of sections) {
-        if (markerY >= sec.offsetTop) {
-          currentId = sec.id;
-        } else {
-          break;
-        }
+    for (const sec of sections) {
+      if (markerY >= sec.offsetTop) {
+        currentId = sec.id;
+      } else {
+        break;
       }
     }
 
