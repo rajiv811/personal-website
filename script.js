@@ -366,12 +366,10 @@ tiltCards.forEach((card) => {
       .then((response) => {
         if (!response.ok) throw new Error('Submission failed');
         form.reset();
-        setStatus("Thanks! Your message has been sent — I'll be in touch soon.", false);
+        window.location.href = '/thank-you.html';
       })
       .catch(() => {
         setStatus('Something went wrong. Please try again or email me directly.', true);
-      })
-      .finally(() => {
         const elapsed = Date.now() - startedAt;
         const remaining = Math.max(0, TRANSITION_LOAD_MS - elapsed);
         window.setTimeout(hideLoaderImmediately, remaining);
