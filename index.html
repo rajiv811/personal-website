@@ -149,10 +149,11 @@
         <p class="contact-intro" style="color:var(--muted);margin:1rem 0 2.5rem;">
           Have a project in mind or just want to say hello? Send me a note.
         </p>
-        <form class="contact-form" action="https://formsubmit.co/rajivsingireddy811@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="New message from rajivsingireddy.com" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_template" value="table" />
+        <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="hp-field" hidden>
+            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+          </p>
           <div class="form-row">
             <div class="form-field">
               <label for="first-name">First name <span class="req">*</span></label>
