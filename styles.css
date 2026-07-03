@@ -1343,15 +1343,19 @@ h3 {
 }
 
 /* Name link on the home page */
-.name-link {
+.name-link span {
   transition: color 0.2s ease;
+}
+
+.name-sanskrit {
+  color: var(--muted);
+  font-family: "Noto Sans Devanagari", "Instrument Serif", serif;
 }
 
 .name-link:hover span,
 .name-link:focus-visible span {
   color: var(--accent);
 }
-
 /* About page */
 .about-page,
 .listening,
