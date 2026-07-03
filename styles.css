@@ -943,9 +943,9 @@ h3 {
   .site-header {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
   }
 
   .brand-seal {
