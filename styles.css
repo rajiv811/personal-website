@@ -1208,6 +1208,27 @@ h3 {
 .lightbox-nav.prev { left: 1.1rem; }
 .lightbox-nav.next { right: 1.1rem; }
 
+/* On mobile the arrow "box" sits over the photo; strip it down to a bare
+   icon so it doesn't visually interfere with the image. */
+@media (max-width: 640px) {
+  .lightbox-nav {
+    width: 2.4rem;
+    height: 2.4rem;
+    background: transparent;
+    border: none;
+    backdrop-filter: none;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
+  }
+
+  .lightbox-nav:hover,
+  .lightbox-nav:active {
+    background: transparent;
+  }
+
+  .lightbox-nav.prev { left: 0.4rem; }
+  .lightbox-nav.next { right: 0.4rem; }
+}
+
 /* Make boxes sharp-edged rather than rounded */
 .immersive-section,
 .floating-card,
