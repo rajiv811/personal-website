@@ -270,7 +270,7 @@ tiltCards.forEach((card) => {
     if (i < 0) i = images.length - 1;
     if (i >= images.length) i = 0;
     current = i;
-    const src = images[current].src || images[current].getAttribute('data-src');
+    const src = images[current].getAttribute('data-full') || images[current].getAttribute('data-src') || images[current].src;
     overlayImg.src = src;
     overlayImg.alt = images[current].alt || '';
     overlay.classList.add('active');
