@@ -941,7 +941,27 @@ h3 {
 
 @media (max-width: 820px) {
   .site-header {
-    display: grid;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .brand-seal {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+
+  .site-nav {
+    flex-wrap: nowrap;
+    gap: 0.1rem;
+  }
+
+  .site-nav a {
+    padding: 0.4rem 0.55rem;
+    font-size: 0.78rem;
+    white-space: nowrap;
   }
 
   h1 {
