@@ -1509,6 +1509,38 @@ h3 {
   margin-top: 1.5rem;
 }
 
+.about-intro {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+  margin-top: 1.5rem;
+}
+
+.about-photo {
+  flex: 0 0 auto;
+  width: 15rem;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+}
+
+.about-intro .prose {
+  margin-top: 0;
+}
+
+@media (max-width: 640px) {
+  .about-intro {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .about-photo {
+    width: 12rem;
+  }
+}
+
 .about-page .prose p {
   color: var(--muted);
   font-size: 1.05rem;
