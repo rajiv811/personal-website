@@ -331,3 +331,48 @@ tiltCards.forEach((card) => {
     startX = null;
   });
 })();
+
+// Netlify contact form: submit via fetch so the visitor stays on the page
+(function () {
+  const form = document.querySelector('.contact-form');
+  if (!form) return;
+  const status = document.querySelector('.form-status');
+  const submitBtn = form.querySelector('.contact-submit');
+
+  function setStatus(message, isError) {
+    if (!status) return;
+    status.textContent = message;
+    status.hidden = false;
+    status.style.color = isError ? '#c0392b' : 'var(--muted)';
+  }
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const data = new URLSearchParams(new FormData(form));
+
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+    }
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: data.toString(),
+    })
+      .then((response) => {
+        if (!response.ok) throw new Error('Submission failed');
+        form.reset();
+        setStatus("Thanks! Your message has been sent — I'll be in touch soon.", false);
+      })
+      .catch(() => {
+        setStatus('Something went wrong. Please try again or email me directly.', true);
+      })
+      .finally(() => {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send message';
+        }
+      });
+  });
+})();
