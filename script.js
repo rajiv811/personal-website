@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  const transitionLinks = document.querySelectorAll('.section-link, .back-button');
+  const transitionLinks = document.querySelectorAll('.section-link, .back-button, .name-link');
   transitionLinks.forEach((link) => {
     link.addEventListener('click', (event) => {
       if (!shouldHandleTransition(event, link)) return;
