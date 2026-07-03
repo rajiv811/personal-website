@@ -1354,7 +1354,8 @@ h3 {
 
 /* About page */
 .about-page,
-.listening {
+.listening,
+.watching {
   max-width: 46rem;
   margin: 0 auto;
 }
@@ -1372,7 +1373,6 @@ h3 {
 
 .listening {
   margin-top: 3.5rem;
-  padding-bottom: 4rem;
 }
 
 .spotify-embed {
@@ -1381,4 +1381,20 @@ h3 {
 
 .spotify-profile {
   margin-top: 1.5rem;
+}
+
+.watching {
+  margin-top: 1rem;
+  padding-bottom: 4rem;
+}
+
+.sheet-embed {
+  margin-top: 1.25rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.sheet-embed iframe {
+  display: block;
+  border-radius: 12px;
 }
