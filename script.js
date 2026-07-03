@@ -354,6 +354,9 @@ tiltCards.forEach((card) => {
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending…';
     }
+    if (status) status.hidden = true;
+    showTransitionLoader();
+    const startedAt = Date.now();
 
     fetch('/', {
       method: 'POST',
@@ -369,6 +372,9 @@ tiltCards.forEach((card) => {
         setStatus('Something went wrong. Please try again or email me directly.', true);
       })
       .finally(() => {
+        const elapsed = Date.now() - startedAt;
+        const remaining = Math.max(0, TRANSITION_LOAD_MS - elapsed);
+        window.setTimeout(hideLoaderImmediately, remaining);
         if (submitBtn) {
           submitBtn.disabled = false;
           submitBtn.textContent = 'Send message';
