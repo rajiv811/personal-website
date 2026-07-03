@@ -44,6 +44,24 @@ function shouldHandleTransition(event, link) {
   return true;
 }
 
+// Whenever a page is restored from the browser's back/forward cache (e.g.
+// clicking the browser's own Back/Forward buttons), make sure any
+// in-progress transition loader is hidden immediately. Without this, a page
+// that was mid-transition (loader visible, logo animating) when the user
+// navigated away would come back from bfcache still stuck showing the
+// looping loader animation.
+window.addEventListener('pageshow', (event) => {
+  const navEntry = performance.getEntriesByType('navigation')[0];
+  const isHistoryRestore = event.persisted || (navEntry && navEntry.type === 'back_forward');
+  if (isHistoryRestore) {
+    hideLoaderImmediately();
+  }
+});
+
+window.addEventListener('pagehide', () => {
+  hideLoaderImmediately();
+});
+
 // Hide loading screen after page loads
 document.addEventListener('DOMContentLoaded', () => {
   const loadingScreen = document.getElementById('loadingScreen');
@@ -78,18 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (targetEl) {
       requestAnimationFrame(() => {
         targetEl.scrollIntoView({ block: 'start', behavior: 'auto' });
-      });
-
-      window.addEventListener('pageshow', (event) => {
-        const navEntry = performance.getEntriesByType('navigation')[0];
-        const isHistoryRestore = event.persisted || (navEntry && navEntry.type === 'back_forward');
-        if (isHistoryRestore) {
-          hideLoaderImmediately();
-        }
-      });
-
-      window.addEventListener('pagehide', () => {
-        hideLoaderImmediately();
       });
     }
   }
