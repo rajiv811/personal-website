@@ -1500,7 +1500,8 @@ h3 {
 /* About page */
 .about-page,
 .listening,
-.watching {
+.watching,
+.recent-movie {
   max-width: 46rem;
   margin: 0 auto;
 }
@@ -1561,7 +1562,7 @@ h3 {
 }
 
 .watching {
-  margin-top: 1rem;
+  margin-top: 3.5rem;
   padding-bottom: 4rem;
 }
 
@@ -1574,4 +1575,25 @@ h3 {
 .sheet-embed iframe {
   display: block;
   border-radius: 12px;
+}
+
+.recent-movie {
+  margin-top: 3.5rem;
+}
+
+.recent-movie h3 {
+  margin-top: 0.75rem;
+  font-size: 1.6rem;
+}
+
+.recent-movie-year {
+  margin-left: 0.45rem;
+}
+
+.recent-movie-premise {
+  margin-top: 0.75rem;
+  max-width: 46rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
 }

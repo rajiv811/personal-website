@@ -380,3 +380,66 @@ tiltCards.forEach((card) => {
       });
   });
 })();
+
+// Recently watched movie: auto-fetch the release year and premise from OMDb
+// based on the current title. Re-fetches automatically whenever the title
+// changes; results are cached per-title in localStorage.
+(function initRecentMovie() {
+  const section = document.querySelector('.recent-movie');
+  if (!section) return;
+
+  const OMDB_API_KEY = 'fba7bed7';
+  const titleEl = section.querySelector('.recent-movie-title');
+  const yearEl = section.querySelector('[data-movie-year]');
+  const premiseEl = section.querySelector('[data-movie-premise]');
+  if (!titleEl) return;
+
+  const title = titleEl.textContent.trim();
+  if (!title) return;
+
+  // Optional: add data-movie-year="2017" on the section to disambiguate
+  // titles shared by multiple films.
+  const overrideYear = section.dataset.movieYear || '';
+  const cacheKey = `recent-movie:${title.toLowerCase()}:${overrideYear}`;
+
+  const show = (el, text) => {
+    if (!el || !text || text === 'N/A') return;
+    el.textContent = text;
+    el.hidden = false;
+  };
+
+  const render = (data) => {
+    if (!data || data.Response === 'False') return;
+    if (yearEl && data.Year && data.Year !== 'N/A') {
+      yearEl.textContent = `(${data.Year})`;
+      yearEl.hidden = false;
+    }
+    show(premiseEl, data.Plot);
+  };
+
+  let cached = null;
+  try {
+    cached = JSON.parse(localStorage.getItem(cacheKey));
+  } catch (err) {
+    cached = null;
+  }
+  if (cached) render(cached);
+
+  const params = new URLSearchParams({ t: title, apikey: OMDB_API_KEY, plot: 'short' });
+  if (overrideYear) params.set('y', overrideYear);
+
+  fetch(`https://www.omdbapi.com/?${params.toString()}`)
+    .then((res) => res.json())
+    .then((data) => {
+      if (!data || data.Response === 'False') return;
+      render(data);
+      try {
+        localStorage.setItem(cacheKey, JSON.stringify(data));
+      } catch (err) {
+        /* ignore storage failures */
+      }
+    })
+    .catch(() => {
+      /* network error: leave whatever (if anything) was cached */
+    });
+})();
